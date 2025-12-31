@@ -1,64 +1,51 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const subtitleRef = useRef<HTMLHeadingElement>(null);
+
+  // Typewriter effect for subtitle
+  useEffect(() => {
+    const element = subtitleRef.current;
+    if (!element) return;
+
+    const subtitleText = "ull Stack Developer";
+    let index = 0;
+    element.textContent = "F";
+
+    const interval = setInterval(() => {
+      element.textContent += subtitleText[index];
+      index++;
+
+      if (index === subtitleText.length) {
+        clearInterval(interval);
+      }
+    }, 75);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <section id="introduction" className={styles.section}>
+          <div className={styles.introduction}>
+            <h1 className={styles.title}>Hi, I&rsquo;m Victor</h1>
+            <h2 className={styles.subtitle} ref={subtitleRef}></h2>
+            <p>(and soon to be 1st division volleyball player)</p>
+          </div>
+        </section>
+        <section id="tech-stack" className={styles.section}>
+          <div className={styles.skills}>
+            <h2 className={styles.sectionTitle}>Tech Stack</h2>
+          </div>
+        </section>
+        <div className={styles.navLinks}>
+          <Link href="#introduction">Introduction</Link>
+          <Link href="#tech-stack">Tech Stack</Link>
         </div>
       </main>
     </div>
