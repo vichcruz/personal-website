@@ -1,13 +1,43 @@
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
+  --color-accent-main: #e63946;
+  --color-accent-pop: #43cdc4;
+  --color-txt-primary: #eaeaea;
+  --color-txt-secondary: #a1a1a1;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.75rem;
+  --h5-font-size: 1.5rem;
+  --p-font-size: 1rem;
+  --p-sm-font-size: 0.625rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0d0d0d;
     --foreground: #ededed;
   }
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+h3 {
+  font-size: var(--h3-font-size);
+}
+h4 {
+  font-size: var(--h4-font-size);
+}
+h5 {
+  font-size: var(--h5-font-size);
+}
+p {
+  font-size: var(--p-font-size);
 }
 
 html,
@@ -18,7 +48,6 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,5 +67,45 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+
+    --s: 31px; /* control the size*/
+    --c1: #000000;
+    --c2: #201515;
+    --c3: #303030;
+
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        at calc(250% / 3) calc(100% / 3),
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -120deg at calc(50% / 3) calc(100% / 3),
+        var(--c2) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(250% / 3),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(250% / 3),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+      );
+    background-size: calc(var(--s) * sqrt(3)) var(--s);
   }
 }
