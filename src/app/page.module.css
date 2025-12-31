@@ -36,30 +36,18 @@
   align-items: center;
 }
 
-.introduction {
-  display: flex;
-  flex-direction: column;
-  gap: 0.575rem;
-  align-items: center;
-}
-
-.subtitle {
-  background: linear-gradient(
-    to right,
-    var(--color-accent-main),
-    var(--color-accent-pop)
-  );
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .navLinks {
   position: fixed;
   bottom: 20px;
   display: flex;
-  gap: 20px;
+  a {
+    padding-inline: 1rem;
+    font-size: 1.25rem;
+  }
+
+  a:not(:last-child) {
+    border-right: 1px solid var(--text-secondary);
+  }
 }
 
 /* Enable hover only on non-touch devices */

@@ -1,0 +1,24 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  gap: 0.575rem;
+  align-items: center;
+}
+
+.subtitle {
+  background: linear-gradient(
+    to right,
+    var(--color-accent-main),
+    var(--color-accent-pop)
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profileImage {
+  border-radius: 25%;
+  margin-bottom: 2rem;
+}

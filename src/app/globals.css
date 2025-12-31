@@ -67,7 +67,9 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    scroll-behavior: smooth;
 
+    /* Hexagon background pattern */
     --s: 31px; /* control the size*/
     --c1: #000000;
     --c2: #201515;
