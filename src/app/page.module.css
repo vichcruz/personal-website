@@ -38,7 +38,8 @@
 
 .navLinks {
   position: fixed;
-  bottom: 20px;
+  top: 2rem;
+  right: 1rem;
   display: flex;
   a {
     padding-inline: 1rem;
