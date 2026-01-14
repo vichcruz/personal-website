@@ -1,10 +1,13 @@
 :root {
+  /* Colors */
   --background: #fafafa;
   --foreground: #171717;
   --color-accent-main: #e63946;
   --color-accent-pop: #43cdc4;
   --color-txt-primary: #eaeaea;
   --color-txt-secondary: #a1a1a1;
+
+  /* Font Sizes */
   --h1-font-size: 3rem;
   --h2-font-size: 2.5rem;
   --h3-font-size: 2rem;
@@ -12,6 +15,8 @@
   --h5-font-size: 1.5rem;
   --p-font-size: 1rem;
   --p-sm-font-size: 0.625rem;
+
+  --border-radius: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
