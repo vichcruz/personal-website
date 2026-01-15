@@ -1,13 +1,13 @@
 import { TechInfo } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./TechStackSection.module.css";
+import styles from "../TechStackSection.module.css";
 
 type StackHeaderProps = {
   tech: TechInfo;
 };
 
-function StackHeader({ tech }: StackHeaderProps) {
+function TechCardHeader({ tech }: StackHeaderProps) {
   const { name, linkToDocs, familiarity } = tech;
   return (
     <div className={styles.header}>
@@ -31,4 +31,4 @@ function StackHeader({ tech }: StackHeaderProps) {
   );
 }
 
-export default StackHeader;
+export default TechCardHeader;

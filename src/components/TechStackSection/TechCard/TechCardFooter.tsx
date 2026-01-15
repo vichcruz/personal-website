@@ -1,11 +1,11 @@
 import { TechInfo } from "@/utils/data";
-import styles from "./TechStackSection.module.css";
+import styles from "../TechStackSection.module.css";
 
 type StackFooterProps = {
   tech: TechInfo;
 };
 
-function StackFooter({ tech }: StackFooterProps) {
+function TechCardFooter({ tech }: StackFooterProps) {
   const { name, description } = tech;
   return (
     <div className={styles.footer}>
@@ -15,4 +15,4 @@ function StackFooter({ tech }: StackFooterProps) {
   );
 }
 
-export default StackFooter;
+export default TechCardFooter;

@@ -1,8 +1,6 @@
 import { TechStack } from "@/utils/data";
-import Image from "next/image";
 import { Tooltip } from "react-tooltip";
-import StackFooter from "./StackFooter";
-import StackHeader from "./StackHeader";
+import TechCard from "./TechCard/TechCard";
 import styles from "./TechStackSection.module.css";
 
 function TechStackSection() {
@@ -14,44 +12,12 @@ function TechStackSection() {
         <div className={styles.carousel}>
           <div className={styles.stack}>
             {TechStack.map((tech) => (
-              <div key={tech.name} className={styles.techCard}>
-                <StackHeader tech={tech} />
-                <Image
-                  src={`${tech.name}Logo.svg`}
-                  alt={`Card displaying technology ${tech.name}`}
-                  width={150}
-                  height={150}
-                />
-                <Image
-                  src={`${tech.name}Logo.svg`}
-                  alt={`Background image for technology ${tech.name} used for animation`}
-                  width={150}
-                  height={150}
-                  className={styles.bgBlurAnimate}
-                />
-                <StackFooter tech={tech} />
-              </div>
+              <TechCard tech={tech} key={tech.name} />
             ))}
           </div>
           <div className={styles.stack} aria-hidden>
             {TechStack.map((tech) => (
-              <div key={tech.name} className={styles.techCard}>
-                <StackHeader tech={tech} />
-                <Image
-                  src={`${tech.name}Logo.svg`}
-                  alt={`Card displaying technology ${tech.name}`}
-                  width={150}
-                  height={150}
-                />
-                <Image
-                  src={`${tech.name}Logo.svg`}
-                  alt={`Background image for technology ${tech.name} used for animation`}
-                  width={150}
-                  height={150}
-                  className={styles.bgBlurAnimate}
-                />
-                <StackFooter tech={tech} />
-              </div>
+              <TechCard tech={tech} key={tech.name} />
             ))}
           </div>
         </div>

@@ -96,6 +96,7 @@
   gap: 0.5rem;
   height: 5rem;
   justify-content: center;
+  text-align: start;
 }
 
 .footerDescription {
