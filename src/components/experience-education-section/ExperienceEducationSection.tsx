@@ -1,30 +1,21 @@
-import pageStyles from "@/app/page.module.css";
 import { useState } from "react";
+import Switch from "../switch/Switch";
 import styles from "./ExperienceEducationSection.module.css";
 
 function ExperienceEducationSection() {
-  const [currentView, setCurrentView] = useState<"education" | "experience">(
-    "experience"
-  );
+  const [isEducation, setIsEducation] = useState<boolean>(false);
 
   return (
-    <section id="experience-education" className={pageStyles.section}>
-      <div className={styles.experienceEducation}>
-        <button
-          onClick={() => {
-            if (currentView === "education") {
-              setCurrentView("experience");
-            } else {
-              setCurrentView("education");
-            }
-          }}
-        >
-          Switch to {currentView === "education" ? "experience" : "education"}
-        </button>
-        {currentView === "education" && <h2>Education</h2>}
-        {currentView === "experience" && <h2>Experience</h2>}
-      </div>
-    </section>
+    <div id="experience-education" className={styles.container}>
+      <Switch
+        checked={isEducation}
+        setChecked={setIsEducation}
+        checkedIconURL="/icons/education.svg"
+        uncheckedIconURL="/icons/work.svg"
+      />
+      {isEducation && <h2>Education</h2>}
+      {!isEducation && <h2>Experience</h2>}
+    </div>
   );
 }
 
