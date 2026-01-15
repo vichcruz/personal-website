@@ -1,12 +1,14 @@
 // Data about me that's used in different parts of the website
 // Could be integrated into a separate CMS system (future project)
 
-export const TechStack: {
+export type TechInfo = {
   name: string;
   description: string;
   familiarity: number;
   linkToDocs: string;
-}[] = [
+};
+
+export const TechStack: TechInfo[] = [
   {
     name: "React",
     description: "A UI library for building interactive web apps.",
