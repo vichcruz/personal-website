@@ -1,14 +1,14 @@
+import { TechInfo } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./TechStackSection.module.css";
 
 type StackHeaderProps = {
-  name: string;
-  familiartiy: number;
-  linkToDocs: string;
+  tech: TechInfo;
 };
 
-function StackHeader({ name, familiartiy, linkToDocs }: StackHeaderProps) {
+function StackHeader({ tech }: StackHeaderProps) {
+  const { name, linkToDocs, familiarity } = tech;
   return (
     <div className={styles.header}>
       <Link href={linkToDocs} className={styles.linkToDocs}>
@@ -25,7 +25,7 @@ function StackHeader({ name, familiartiy, linkToDocs }: StackHeaderProps) {
           width={16}
           height={16}
         />
-        <span>{`${familiartiy}/10`}</span>
+        <span>{`${familiarity}/10`}</span>
       </div>
     </div>
   );
