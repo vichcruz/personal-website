@@ -1,6 +1,7 @@
 import { TechStack } from "@/utils/data";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
+import StackFooter from "./StackFooter";
 import StackHeader from "./StackHeader";
 import styles from "./TechStackSection.module.css";
 
@@ -14,11 +15,7 @@ function TechStackSection() {
           <div className={styles.stack}>
             {TechStack.map((tech) => (
               <div key={tech.name} className={styles.techCard}>
-                <StackHeader
-                  name={tech.name}
-                  familiartiy={tech.familiarity}
-                  linkToDocs={tech.linkToDocs}
-                />
+                <StackHeader tech={tech} />
                 <Image
                   src={`${tech.name}Logo.svg`}
                   alt={`Card displaying technology ${tech.name}`}
@@ -32,18 +29,14 @@ function TechStackSection() {
                   height={150}
                   className={styles.bgBlurAnimate}
                 />
-                <div>{tech.description}</div>
+                <StackFooter tech={tech} />
               </div>
             ))}
           </div>
           <div className={styles.stack} aria-hidden>
             {TechStack.map((tech) => (
               <div key={tech.name} className={styles.techCard}>
-                <StackHeader
-                  name={tech.name}
-                  familiartiy={tech.familiarity}
-                  linkToDocs={tech.linkToDocs}
-                />
+                <StackHeader tech={tech} />
                 <Image
                   src={`${tech.name}Logo.svg`}
                   alt={`Card displaying technology ${tech.name}`}
@@ -57,7 +50,7 @@ function TechStackSection() {
                   height={150}
                   className={styles.bgBlurAnimate}
                 />
-                <div>{tech.description}</div>
+                <StackFooter tech={tech} />
               </div>
             ))}
           </div>
