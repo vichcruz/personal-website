@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 2rem;
 }
+
 .carousel {
   overflow: hidden;
   display: flex;
@@ -19,6 +20,10 @@
   will-change: transform;
   animation: scrolling 40s linear infinite;
   padding-right: 3rem; /* Padding-right to have gap between last and first card */
+}
+
+.tooltip {
+  z-index: 1000;
 }
 
 @keyframes scrolling {
@@ -51,7 +56,6 @@
   transform-origin: 65% 75%;
   width: 100%;
   position: absolute;
-  z-index: 1000;
   top: 50%;
   left: 50%;
   transition: opacity 0.8s ease-in-out;
@@ -65,4 +69,22 @@
   to {
     transform: translate(-50%, -50%) scale(1.8) rotate(360deg);
   }
+}
+
+/* Stack Card Header */
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.linkToDocs {
+  z-index: 100;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  z-index: 100;
 }
