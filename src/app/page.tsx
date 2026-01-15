@@ -1,9 +1,9 @@
 "use client";
 
-import ExperienceEducationSection from "@/components/ExperienceEducationSection/ExperienceEducationSection";
-import GetToKnowMeSection from "@/components/GetToKnowMeSection/GetToKnowMeSection";
-import IntroductionSection from "@/components/IntroductionSection/IntroductionSection";
-import TechStackSection from "@/components/TechStackSection/TechStackSection";
+import ExperienceEducationSection from "@/components/experience-education-section/ExperienceEducationSection";
+import GetToKnowMeSection from "@/components/get-to-know-me-section/GetToKnowMeSection";
+import IntroductionSection from "@/components/introduction-section/IntroductionSection";
+import TechStackSection from "@/components/tech-stack-section/TechStackSection";
 import Link from "next/link";
 import styles from "./page.module.css";
 

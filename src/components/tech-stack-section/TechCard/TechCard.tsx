@@ -1,5 +1,5 @@
-import TechCardFooter from "@/components/TechStackSection/TechCard/TechCardFooter";
-import TechCardHeader from "@/components/TechStackSection/TechCard/TechCardHeader";
+import TechCardFooter from "@/components/tech-stack-section/TechCard/TechCardFooter";
+import TechCardHeader from "@/components/tech-stack-section/TechCard/TechCardHeader";
 import { TechInfo } from "@/utils/data";
 import Image from "next/image";
 import styles from "../TechStackSection.module.css";
