@@ -16,7 +16,6 @@ export default function Home() {
         <ExperienceEducationSection />
         <GetToKnowMeSection />
         <div className={styles.navLinks}>
-          <Link href="#introduction">Introduction</Link>
           <Link href="#tech-stack">Tech Stack</Link>
           <Link href="#experience-education">Experience & Education</Link>
           <Link href="#get-to-know-me">Get to Know Me</Link>
