@@ -7,6 +7,7 @@ type SwitchProps = {
   setChecked: Dispatch<SetStateAction<boolean>>;
   uncheckedIconURL?: string;
   checkedIconURL?: string;
+  className?: string;
 };
 
 function Switch({
@@ -14,12 +15,13 @@ function Switch({
   setChecked,
   uncheckedIconURL,
   checkedIconURL,
+  className,
 }: SwitchProps) {
   return (
     <button
       role="switch"
       aria-checked={checked}
-      className={styles.container}
+      className={`${styles.container} ${className ? className : ""}`}
       onClick={() => setChecked(!checked)}
     >
       <span className={`${styles.dot} ${checked ? styles.placeEnd : ""}`}>
