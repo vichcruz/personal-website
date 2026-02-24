@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--color-txt-primary);
+  border-radius: var(--border-radius);
+  color: #1f1f1f;
+  width: 30rem;
+  padding: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.smallFont {
+  font-size: var(--p-sm-font-size);
+}
+
+.midFont {
+  font-size: var(--p-md-font-size);
+}
