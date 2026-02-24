@@ -28,6 +28,7 @@ function Timeline({
                 height: "50px",
                 backgroundColor: "white",
                 width: "1px",
+                flexShrink: 0,
               }}
             />
           )}
