@@ -32,6 +32,7 @@
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
+  display: inline-flex;
 }
 
 .showMoreButton:hover {
